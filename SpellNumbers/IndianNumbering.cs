@@ -57,7 +57,7 @@ namespace SpellNumbers
                 outputValue = number % 100;
                 resultInWord = resultInWord + " " + DigitToWords(outputValue);
             }
-            resultInWord = resultInWord + ' ' + "Only.";
+            resultInWord = resultInWord.TrimStart() + ' ' + "Only.";
             return resultInWord;
         }
 
@@ -70,18 +70,25 @@ namespace SpellNumbers
         public static string DigitToWords(Int64 userInput)
         {
             string wordResult = "";
-            if ((userInput >= 1) && (userInput <= 10))
+            if ((userInput >= 0) && (userInput <= 10))
             {
-                if ((userInput % 10) == 1) wordResult = "One";
-                if ((userInput % 10) == 2) wordResult = "Two";
-                if ((userInput % 10) == 3) wordResult = "Three";
-                if ((userInput % 10) == 4) wordResult = "Four";
-                if ((userInput % 10) == 5) wordResult = "Five";
-                if ((userInput % 10) == 6) wordResult = "Six";
-                if ((userInput % 10) == 7) wordResult = "Seven";
-                if ((userInput % 10) == 8) wordResult = "Eight";
-                if ((userInput % 10) == 9) wordResult = "Nine";
-                if ((userInput % 10) == 0) wordResult = "Ten";
+                if (userInput == 0)
+                {
+                    wordResult = "Zero";
+                }
+                else if (userInput >= 1)
+                {
+                    if ((userInput % 10) == 1) wordResult = "One";
+                    if ((userInput % 10) == 2) wordResult = "Two";
+                    if ((userInput % 10) == 3) wordResult = "Three";
+                    if ((userInput % 10) == 4) wordResult = "Four";
+                    if ((userInput % 10) == 5) wordResult = "Five";
+                    if ((userInput % 10) == 6) wordResult = "Six";
+                    if ((userInput % 10) == 7) wordResult = "Seven";
+                    if ((userInput % 10) == 8) wordResult = "Eight";
+                    if ((userInput % 10) == 9) wordResult = "Nine";
+                    if ((userInput % 10) == 0) wordResult = "Ten";
+                }
             }
             if (userInput > 9 && userInput < 20)
             {
