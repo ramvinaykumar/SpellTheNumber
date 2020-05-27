@@ -32,6 +32,10 @@ namespace SpellNumbers
 
                 Console.WriteLine("Indian number system...");
                 Console.WriteLine($"The Output of user entered number is >>> {IndianNumbering.SpellTheNumber(inputValue)}");
+
+                Console.WriteLine("International number system...");
+                Console.WriteLine($"The Output of user entered number is >>> {InternationNumbering.NumberToWords(inputValue)}");
+
                 Console.ReadKey();
                 Environment.Exit(0);
             }

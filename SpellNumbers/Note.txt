@@ -1,0 +1,2 @@
+﻿1. Indian Numbering is done till only crore (One Crore).
+2. Please run this console app the pass the number(s) to Spell them into Words.
